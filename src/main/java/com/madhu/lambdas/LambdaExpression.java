@@ -1,18 +1,18 @@
 package com.madhu.lambdas;
 
-public class FunctorExample {
+public class LambdaExpression {
 
-    interface Functor<T,U> {
+    interface Function<T,U> {
         U apply(T input);
     }
 
-    static Integer increment(Integer value, Functor<Integer,Integer> incrementFunction) {
+    static Integer increment(Integer value, Function<Integer,Integer> incrementFunction) {
         return incrementFunction.apply(value);
     }
 
     public static void main(String[] args) {
         var value = 10;
-        var result = increment(value, new Functor<Integer, Integer>() {
+        var result = increment(value, new Function<Integer, Integer>() {
             @Override
             public Integer apply(Integer input) {
                 return input+1;
