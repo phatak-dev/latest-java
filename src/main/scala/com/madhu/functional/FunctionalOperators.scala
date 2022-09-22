@@ -3,7 +3,7 @@ package com.madhu.functional
 object FunctionalOperators {
 
   def main(args: Array[String]): Unit = {
-    val simpleFunction = (x:Int) => x+10
+    val simpleFunction: (Int) => Int = (x:Int) => x+10
     println(simpleFunction(10))
 
     val noReturnFunction = (x:Int) => println(x)
